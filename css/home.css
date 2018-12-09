@@ -1,0 +1,45 @@
+html, body {
+  height: 100%;
+}
+
+#__next, #__next > div {
+  height: 100%;
+}
+
+.index__content {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+
+.index__title__row {
+  margin-bottom: 3rem;
+}
+
+.index__title__center__wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.index__title__wrapper {
+  display: inline-block;
+  text-align: right;
+}
+
+.index__title__title {
+  margin-bottom: -.5rem;
+}
+
+.index__button__row {
+  margin-bottom: 3rem;
+}
+
+.index__alert {
+  width: 20rem;
+}
+
+.push, .index__footer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  padding: 0 1rem .5rem;
+}

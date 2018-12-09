@@ -1,0 +1,46 @@
+.header__container {
+  height: 50px;
+  background-color: #5682A3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 .5rem;
+}
+
+.header__arrowleft__container {
+  /* flex: 1; */
+}
+
+.header__arrowleft {
+  color: white;
+  cursor: pointer;
+}
+
+.header__signout__right {
+  color: white;
+  cursor: pointer;
+}
+
+.header__fake__item {
+  /* flex: 1; */
+}
+
+.header__title__container {
+  display: flex;
+  align-items: center;
+}
+
+.header__title__container__click {
+  cursor: pointer;
+}
+
+.header__title {
+  color: white;
+  display: inline-block;
+  margin: 0;
+}
+
+.header__sub__title {
+  margin-left: 1rem;
+  margin-top: 3px;
+}

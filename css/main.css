@@ -1,0 +1,10 @@
+.main__container__header {
+  padding: 0 !important;
+}
+
+.main__container__chat__list {
+  padding: 0 !important;
+  overflow-y: auto;
+  height: 100%;
+  margin-bottom: -100px;
+}

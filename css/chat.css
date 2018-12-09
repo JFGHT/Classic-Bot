@@ -1,0 +1,40 @@
+.chat__header {
+  padding: 0 !important;
+}
+
+.chat__content {
+  background-color: #F6F8FA;
+  overflow-y: auto;
+  height: 100%;
+  margin-bottom: -100px;
+  padding: 0 0 .2rem 0 !important;
+}
+
+.chat__form {
+  width: 100%;
+}
+
+.chat__input {
+  overflow-y: hidden;
+  height: 50px;
+}
+
+.chat__message__list {
+  height: calc(100% - 100px);
+}
+
+.chat__send__button {
+  background: url(/static/send.png) no-repeat;
+  background-size: 40px 50px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  outline: none;
+}
+
+.chat__footer {
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  padding: 0 !important;
+}
