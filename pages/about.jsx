@@ -15,7 +15,7 @@ const About = () => (
       <Col>
         <h3 className="about__whoami__title mr-3">What is Classic Bot?</h3>
         <a
-          href="https://github.com/JFGHT"
+          href="https://github.com/JFGHT/Classic-Bot"
           target="_blank"
           rel="noopener noreferrer"
         >
