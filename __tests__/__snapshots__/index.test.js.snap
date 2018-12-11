@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`With Snapshot Testing App starts with header and redux 1`] = `
+<div>
+  <div
+    className="index__content container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="index__title__center__wrapper"
+        >
+          <img
+            alt="Warcraft III Reforged"
+            src="/static/reforged.png"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      className="index__title__row row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="index__title__center__wrapper"
+        >
+          <div
+            className="index__title__wrapper"
+          >
+            <h1
+              className="index__title__title"
+            >
+              Classic Bot
+            </h1>
+            <small
+              className="index__title__subtitle"
+            >
+              v1.0.0
+            </small>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="index__title__center__wrapper"
+        >
+          <div
+            className="position-relative form-group"
+          >
+            <input
+              autoFocus={true}
+              className="form-control"
+              id="apiKey"
+              name="apiKey"
+              onChange={[Function]}
+              placeholder="Enter your API key..."
+              type="password"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="index__button__row row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="index__title__center__wrapper"
+        >
+          <button
+            aria-label={null}
+            className="btn btn-primary"
+            onClick={[Function]}
+            type="button"
+          >
+            Connect
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      className="index__faq__row row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="index__title__center__wrapper"
+        >
+          <a
+            href="/about"
+            onClick={[Function]}
+          >
+            What is Classic Bot?
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="push"
+    />
+  </div>
+  <footer
+    className="index__footer"
+  >
+    <small>
+      Warcraft® III: Reforged™ | ©2018 Blizzard Entertainment, Inc.. All rights reserved. This is not an official product.
+    </small>
+  </footer>
+</div>
+`;
