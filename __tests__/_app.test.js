@@ -10,8 +10,11 @@ import thunk from 'redux-thunk';
 import { middleware } from '../store/websocket.middleware';
 import Index from '../pages/index';
 
+// Mocking Router
 const mockedRouter = { push: () => {}, prefetch: () => {} };
+// Running the Router instance
 Router.router = mockedRouter;
+
 const middlewares = [thunk, middleware];
 const initialState = {
   messages: [],
