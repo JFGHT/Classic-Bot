@@ -1,6 +1,6 @@
 {
   "name": "classic-bot",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Classic Games Battle.net Bot Web Application",
   "main": "index.js",
   "repository": "https://github.com/JFGHT/Classic-Bot.git",
