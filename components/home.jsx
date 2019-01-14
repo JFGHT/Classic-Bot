@@ -60,7 +60,7 @@ class Home extends React.Component {
                   Classic Bot
                 </h1>
                 <small className="index__title__subtitle">
-                  v1.0.0
+                  v1.0.1
                 </small>
               </div>
             </div>
