@@ -11,17 +11,20 @@ import '../css/chat.css';
 class Chat extends React.Component {
   // Format a message for the MessageList component
   static formatMessage(user, message, props) {
+    const foundBot = !user && props.botChat.find(
+      bCMessage => bCMessage.request_id === message.request_id,
+    );
+
     return {
-      title: user ? user.toon_name : '',
-      titleColor: user ? user.color : '',
+      title: user ? user.toon_name : (!foundBot ? '*Player left channel*' : ''),
+      titleColor: user ? user.color : (!foundBot ? '#dcdcdc' : ''),
       request_id: message.request_id,
       date: message.date,
       type: 'text',
-      position: user ? 'left' : 'right',
-      text: user
+      position: user || (!user && !foundBot) ? 'left' : 'right',
+      text: user || (!user && !foundBot)
         ? message.payload.message
-        : props.botChat.find(bCMessage => bCMessage.request_id === message.request_id)
-          .payload.message,
+        : foundBot.payload.message,
     };
   }
 
