@@ -101,9 +101,9 @@ class Index extends React.Component {
 
     // Getting last message from each conversation
     const lastChannelMessage = chat[chat.length - 1];
-    const lastChannelMessageUSer = lastChannelMessage && lastChannelMessage.command !== 'Botapichat.SendMessageResponse'
+    const lastChannelMessageUser = lastChannelMessage && lastChannelMessage.command !== 'Botapichat.SendMessageResponse'
       && lastChannelMessage.command !== 'Botapichat.SendWhisperResponse'
-      ? users.get(lastChannelMessage.payload.user_id).toon_name
+      ? (users.get(lastChannelMessage.payload.user_id) ? users.get(lastChannelMessage.payload.user_id).toon_name : '*Player left channel*')
       : 'You';
     const lastChannelBotChat = lastChannelMessage && (lastChannelMessage.command === 'Botapichat.SendMessageResponse'
       || lastChannelMessage.command === 'Botapichat.SendWhisperResponse')
@@ -116,7 +116,7 @@ class Index extends React.Component {
           avatar: '/static/reforged.png',
           alt: `${connectionData.payload.channel} (${users.size})`,
           title: `${connectionData.payload.channel} (${users.size})`,
-          subtitle: chat.length > 0 ? `${lastChannelMessageUSer}: ${lastChannelBotChat || lastChannelMessage.payload.message}` : '',
+          subtitle: chat.length > 0 ? `${lastChannelMessageUser}: ${lastChannelBotChat || lastChannelMessage.payload.message}` : '',
           date: chat.length > 0 ? lastChannelMessage.date : '',
           unread: 0,
         },
