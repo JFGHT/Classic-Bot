@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { MessageList, Input } from 'react-chat-elements';
 import { Container } from 'reactstrap';
+import { isPermissionGranted, newNotification } from '../lib/notifications';
 import { sendMessage as sendMessageAction } from '../store/actions';
 import Header from './header';
 import SpecificView from './specificView';
@@ -73,6 +74,27 @@ class Chat extends React.Component {
     }
 
     return Object.keys(newState).length > 0 ? newState : null;
+  }
+
+  componentDidUpdate(prevProps) {
+    const { chat, selectedChat } = this.props;
+    const { chatMessages } = this.state;
+    const message = chatMessages[chatMessages.length - 1];
+
+    /**
+     * New notification when:
+     * - It's a whisper and theres no focus on the tab.
+     * - It's a whisper but we are not in the correct chat.
+     * - It's a mention (the message in channel has '@botname')
+     */
+    // ToDo: Fix the 3rd case. It's not message.title (message owner), it's the actual bot's name.
+    if (selectedChat && selectedChat !== prevProps.selectedChat && isPermissionGranted()
+      && chat.length > prevProps.chat && ((selectedChat !== 'channel' && !document.hasFocus())
+        || (document.hasFocus() && selectedChat !== message.title)
+        || (selectedChat === 'channel' && !document.hasFocus() && message.text.indexOf(`@${message.title}`) !== -1))
+    ) {
+      newNotification('Whisper', `${message.title}: ${message.text}`);
+    }
   }
 
   changeValue(event, name) {
