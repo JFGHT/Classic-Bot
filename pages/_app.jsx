@@ -3,8 +3,13 @@ import Head from 'next/head';
 import React from 'react';
 import { Provider } from 'react-redux';
 import withReduxStore from '../lib/with-redux-store';
+import { requestPermission } from '../lib/notifications';
 
 class MyApp extends App {
+  componentDidMount() {
+    requestPermission();
+  }
+
   render() {
     const { Component, pageProps, reduxStore } = this.props;
 
